@@ -1,8 +1,8 @@
 import os
 import logging
 from pyrogram import Client
-from pytgcalls import PyTgCalls
-from pytgcalls.types import Update
+from py_tgcalls import PyTgCalls
+from py_tgcalls.types import Update
 
 # Import handlers
 from handlers.start import start_command
@@ -58,15 +58,6 @@ async def on_stream_end(client: PyTgCalls, update: Update):
         await music_player.handle_stream_end(chat_id)
     except Exception as e:
         logger.error(f"Error in stream end handler: {e}")
-
-@pytgcalls.on_playout_ended()
-async def on_playout_ended(client: PyTgCalls, update: Update):
-    """Handle playout ended event"""
-    try:
-        chat_id = update.chat_id
-        await music_player.handle_stream_end(chat_id)
-    except Exception as e:
-        logger.error(f"Error in playout ended handler: {e}")
 
 async def startup():
     """Initialize bot on startup"""
