@@ -2,7 +2,7 @@ import os
 import logging
 from pyrogram import Client
 from pytgcalls import PyTgCalls
-from pytgcalls.types.input_stream import Update
+from pytgcalls.types import Update
 
 # Import handlers
 from handlers.start import start_command
