@@ -3,7 +3,7 @@ import logging
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pytgcalls import PyTgCalls
-from pytgcalls.types import MediaStream
+from pytgcalls.types.input_stream import InputAudioStream, InputStream
 from db import db
 from music.youtube import youtube_dl
 
@@ -87,13 +87,14 @@ class MusicPlayer:
                 logger.error(f"File not found: {file_path}")
                 return
                 
-            # Join voice chat and play using MediaStream
+            # Join voice chat and play
             await self.pytgcalls.join_group_call(
                 chat_id,
-                MediaStream(
-                    file_path,
-                    video_flags=0,  # Audio only
-                )
+                InputStream(
+                    InputAudioStream(
+                        file_path,
+                    ),
+                ),
             )
             
         except Exception as e:
