@@ -1,5 +1,5 @@
 pyrogram==2.0.106
-pytgcalls==0.8.0
+pytgcalls==0.7.9
 pymongo==4.5.0
 motor==3.3.2
 yt-dlp==2023.11.14
