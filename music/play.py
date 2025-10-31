@@ -2,8 +2,8 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from py_tgcalls import PyTgCalls
-from py_tgcalls.types import MediaStream
+from pytgcalls import PyTgCalls
+from pytgcalls.types.input_stream import MediaStream
 from db import db
 from music.youtube import youtube_dl
 
