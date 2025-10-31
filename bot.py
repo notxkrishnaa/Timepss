@@ -1,8 +1,8 @@
 import os
 import logging
 from pyrogram import Client
-from py_tgcalls import PyTgCalls
-from py_tgcalls.types import Update
+from pytgcalls import PyTgCalls
+from pytgcalls.types.input_stream import Update
 
 # Import handlers
 from handlers.start import start_command
