@@ -3,6 +3,7 @@ import logging
 from pyrogram import Client
 from pytgcalls import PyTgCalls
 from pytgcalls.types import Update
+from pytgcalls.types.input_stream import InputAudioStream, InputStream
 
 # Import handlers
 from handlers.start import start_command
