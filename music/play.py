@@ -3,7 +3,7 @@ import logging
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pytgcalls import PyTgCalls
-from pytgcalls.types.input_stream import MediaStream
+from pytgcalls.types import MediaStream
 from db import db
 from music.youtube import youtube_dl
 
